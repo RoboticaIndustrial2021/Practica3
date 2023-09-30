@@ -18,8 +18,7 @@ posi = Pose_2_TxyzRxyz(pose_ref)    #convierte la matriz de transformacion a val
 print (posi)
 home_joints =  robot.JointsHome()    #devuelvee los valores por defecto de las articulaciones
 print (home_joints)
-#robot.MoveJ(home_joints)
-pose_ref=robot.Pose()    #en la variable pose_ref se guarda la posición actual del robot
+robot.MoveJ(home_joints)
 
 limitneg,limitpos,pp = robot.JointLimits()    #devuelve los valores limites de cada articulacion
 print (limitneg,  "\n" ,limitpos ,"\n" )
